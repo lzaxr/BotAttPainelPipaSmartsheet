@@ -33,7 +33,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  * @author vitor.heser
  */
 public class ExtrairRelatorioTMA {
-    public String enderecoSansys = "http://osonline.aegea.com.br:5555/sansysos/efetuarLoginUsuario.wf";
+    public String enderecoSansys = "http://osonline.aegea.com.br/sansysos/efetuarLoginUsuario.wf";
     public String usuario = "vitor.heser";
     public String senha = "155Heser";
     public void ExtrairSansys(String PastaDownload, ArrayList<String> dados, Integer MaxDeLinhas) throws InterruptedException, IOException, ParseException, SmartsheetException, ClassNotFoundException, SQLException{
@@ -43,7 +43,7 @@ public class ExtrairRelatorioTMA {
         System.out.println("=============================================================");
         System.setProperty("webdriver.chrome.driver", "C:/Selenium/chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
-//        options.addArguments("headless");
+        
         WebDriver browser = new ChromeDriver(options);
         Date data = new Date();
         SimpleDateFormat datahoje = new SimpleDateFormat("ddMMyyyy");
@@ -122,7 +122,7 @@ public class ExtrairRelatorioTMA {
 
         Thread.sleep(10000);
         browser.close();
-/*
+
         String CaminhoDestino = PastaDownload+"\\arquivo.csv";
         File arquivoOrigem = VerificarDownload(2, PastaDownload);
         File arquivoDestino = new File(CaminhoDestino);
@@ -131,9 +131,9 @@ public class ExtrairRelatorioTMA {
 
         TratarTMA TrataTMA = new TratarTMA();
         TrataTMA.InserirLinhas(CaminhoDestino);
-        TrataTMA.PlotarCSV(CaminhoDestino);*/
+        TrataTMA.PlotarCSV(CaminhoDestino);
         
-        /*TMA SS = new TMA(377406209976196L);
+        TMA SS = new TMA(377406209976196L);
         int i=0;
         while(i==0){
             try{
@@ -143,7 +143,7 @@ public class ExtrairRelatorioTMA {
                 i=0;
             }
         }
-        SS.InserirLinhas(CaminhoDestino, MaxDeLinhas);  */
+        SS.InserirLinhas(CaminhoDestino, MaxDeLinhas);  
         System.out.println("Atualizado o OPE019 Sim!!!!!");
     }
     

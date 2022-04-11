@@ -34,7 +34,7 @@ public class Home {
         
         
         
-        String nome1 = "gabriel.mello";
+        String nome1 = "juliano.simas";
         String PastaDownload = corrigirdiretorio(nome1);
         String relatoriofinal = "\\\\fsprl01\\prolagos\\Publico\\temp\\";
         System.out.println(EEH.BomDiaTardeNoite());
@@ -46,7 +46,7 @@ public class Home {
         Atualiz TesteAtualizando = new Atualiz();
 
         Runtime.getRuntime().exec("taskkill /f /im chromedriver.exe");  
-        //Runtime.getRuntime().exec("taskkill /f /im excel.exe");  
+        Runtime.getRuntime().exec("taskkill /f /im excel.exe");  
         ExtrairRelatorioTMA ERS = new ExtrairRelatorioTMA();
         ExtrairRelatorioEmAberto ERAB = new ExtrairRelatorioEmAberto();
 
@@ -97,18 +97,18 @@ public class Home {
         }catch(Exception e){
             System.out.println("Falhou Ao Atualizar OPE0019 de novo!!!!!!!!!!!!!!!!");
             System.out.println(e);
-            //status = status.length()>0 ? status + " e OPE0019 ": "Erro ao atualizar o OPE0019";  //Erro ao atualizar o OPE0019
-            //SSB.Status("Falha","Falha ao atualizado o Relatorio OPE0019");
-            //TesteAtualizando.Atualizando(status);
+            status = status.length()>0 ? status + " e OPE0019 ": "Erro ao atualizar o OPE0019";  //Erro ao atualizar o OPE0019
+            SSB.Status("Falha","Falha ao atualizado o Relatorio OPE0019");
+            TesteAtualizando.Atualizando(status);
         }
-        try{
+        /*try{
             TesteAtualizando.Atualizando("Atualizando OPE0002");
             ERAB.ExtrairSansys(PastaDownload, dados, MaxDeLinhas);
         }catch(Exception e){
             status = status.length()>0 ? status + " e OPE0002 ": "Erro ao atualizar o OPE0002";
             SSB.Status("Falha","Falha ao atualizado o Relatorio OPE0002");
             TesteAtualizando.Atualizando(status);
-        }
+        }*/
 
         status = status.length()>0 ? status : "Atualizado";
         TesteAtualizando.Atualizando(status);

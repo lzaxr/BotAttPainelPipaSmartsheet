@@ -127,8 +127,6 @@ public class TMA {
                         case 29:
                         case 30:
                         case 31:
-                            //Colunas.add(Integer.valueOf(dado));
-                            //break;
                         case 32:
                         case 33:
                         case 34:

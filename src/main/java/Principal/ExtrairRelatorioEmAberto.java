@@ -30,7 +30,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  * @author vitor.heser
  */
 public class ExtrairRelatorioEmAberto {
-    public String enderecoSansys = "http://osonline.aegea.com.br:5555/sansysos/efetuarLoginUsuario.wf";
+    public String enderecoSansys = "http://osonline.aegea.com.br/sansysos/efetuarLoginUsuario.wf";
     public String usuario = "vitor.heser";
     public String senha = "155Heser";
     public void ExtrairSansys(String PastaDownload, ArrayList<String> dados, Integer MaxDeLinhas) throws InterruptedException, IOException, ParseException, SmartsheetException{
