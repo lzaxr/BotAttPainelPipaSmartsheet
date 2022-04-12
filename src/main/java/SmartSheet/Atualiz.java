@@ -20,7 +20,7 @@ import java.util.*;
  * @author vitor.heser
  */
 public class Atualiz {
-    public String accessToken = "fg18ja86io8n4brrkz54tt9lt6";
+    public String accessToken = "VQQ5aQe4UlQnVtphsIYSezDuYVlZB1VdDvtaq";
     public long idPlanilha= 5642387574810500L;
     
     public void ApagarLinhas() throws SmartsheetException{

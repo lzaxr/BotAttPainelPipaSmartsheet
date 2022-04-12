@@ -45,6 +45,9 @@ public class ExtrairRelatorioTMA {
         ChromeOptions options = new ChromeOptions();
         
         WebDriver browser = new ChromeDriver(options);
+        System.out.println("Antes de digitar endereço -> "+browser.getTitle());
+        browser.get(enderecoSansys);
+        System.out.println("Depois de digitar endereço -> "+browser.getTitle());
         Date data = new Date();
         SimpleDateFormat datahoje = new SimpleDateFormat("ddMMyyyy");
         
@@ -66,7 +69,7 @@ public class ExtrairRelatorioTMA {
         }catch(Exception e){}
         Integer QtdItensPastaDownload = esperarDownload(PastaDownload);
 
-        browser.get(enderecoSansys);
+        System.out.println("Chegou aqui!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 
         WebDriverWait wait = (new WebDriverWait(browser, 60));
 

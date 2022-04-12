@@ -34,7 +34,7 @@ public class Home {
         
         
         
-        String nome1 = "juliano.simas";
+        String nome1 = "sispc.prl";
         String PastaDownload = corrigirdiretorio(nome1);
         String relatoriofinal = "\\\\fsprl01\\prolagos\\Publico\\temp\\";
         System.out.println(EEH.BomDiaTardeNoite());
@@ -131,6 +131,11 @@ public class Home {
             System.out.println ("Definindo pasta de Download: " + PastaDownload);
         } else { 
             PastaDownload = "C:\\Users\\"+nome1+"\\Downloads";
+            System.out.println ("Definindo pasta de Download: " + PastaDownload);
+        }
+        
+        if (!diretorio.exists()) { 
+            PastaDownload = "E:\\Users\\"+nome1+"\\Downloads";
             System.out.println ("Definindo pasta de Download: " + PastaDownload);
         }
         
